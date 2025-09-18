@@ -38,5 +38,5 @@
 ---
 
 ## 🗂️ Estructura del repositorio
-> Puede variar, pero la idea general es:
+> Diferentes módulos repartidos en ficheros .js
 
