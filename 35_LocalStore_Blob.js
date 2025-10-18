@@ -46,7 +46,7 @@
 
 
 
-        //Ejemplo 2
+    //Ejemplo 2
         const usuarios = [
         { nombre: "Ana", edad: 25 },
         { nombre: "Pedro", edad: 28 }

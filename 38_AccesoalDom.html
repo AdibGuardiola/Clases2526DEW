@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo básico del DOM</title>
+  <style>
+    .resaltado {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Aprendiendo DOM</h1>
+
+  <div class="contenedor">
+    <p class="texto">Primer párrafo</p>
+    <p class="texto">Segundo párrafo</p>
+    <button id="boton">Resaltar segundo párrafo</button>
+  </div>
+
+  <div class="contenedor">
+    <p class="texto">Otro bloque de texto</p>
+  </div>
+
+  <script> -->
+    // 1️⃣ querySelector → selecciona el primer elemento que cumple el selector
+    const titulo = document.querySelector("#titulo");
+    console.log("Título:", titulo.textContent);
+
+    // 2️⃣ querySelectorAll → selecciona todos los elementos que coinciden
+    const parrafos = document.querySelectorAll(".texto");
+    console.log("Total de párrafos:", parrafos.length);
+
+    // 3️⃣ getElementsByClassName → selecciona todos los elementos con esa clase
+    const elementosTexto = document.getElementsByClassName("texto");
+    console.log("Con getElementsByClassName:", elementosTexto);
+
+    // 4️⃣ getElementsByTagName → selecciona todos los elementos de una etiqueta
+    const divs = document.getElementsByTagName("div");
+    console.log("Cantidad de <div>:", divs.length);
+
+    // 5️⃣ closest → busca el ancestro más cercano que cumpla con un selector
+    const boton = document.querySelector("#boton");
+    boton.addEventListener("click", () => {
+      // Cambia el color del segundo párrafo
+      parrafos[1].classList.toggle("resaltado");
+
+      // Busca el div contenedor más cercano al botón
+      const contenedor = boton.closest(".contenedor");
+      console.log("El botón está dentro de:", contenedor);
+
+      // Ejemplo de cómo recorrer los divs obtenidos con getElementsByTagName
+      for (let i = 0; i < divs.length; i++) {
+        console.log("Div número", i + 1, ":", divs[i]);
+      }
+    });
+  <!-- </script>
+
+</body>
+</html> -->
